@@ -2,138 +2,118 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#10251f">
-<title>Jakub Oravec — Digital CV</title>
-<meta name="description" content="Jakub Oravec — Hospitality, Guest Experience, Tourism and Watersports.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Jakub Oravec — Hospitality, Guest Relations & Customer Experience">
+<title>Jakub Oravec | Hospitality</title>
 <style>
-:root{--ink:#10251f;--muted:#66736d;--paper:#f5f2ea;--card:#fffdf8;--line:#dfe4dd;--accent:#2e6655;--sand:#d9c8a5}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
-a{color:inherit;text-decoration:none}.wrap{max-width:760px;margin:auto;padding:20px 18px 60px}
-.hero{min-height:78vh;display:flex;flex-direction:column;justify-content:center;padding:30px 4px}
-.kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:800}
-h1{font-size:clamp(46px,13vw,86px);line-height:.88;letter-spacing:-.065em;margin:12px 0 22px}
-.tagline{font-size:18px;max-width:520px;color:#39453f}.chips{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0}
-.chip{border:1px solid var(--line);background:rgba(255,255,255,.55);padding:7px 11px;border-radius:999px;font-size:12px;font-weight:700}
-.cta{display:inline-flex;align-items:center;justify-content:center;background:var(--ink);color:white;border-radius:14px;padding:14px 18px;font-weight:800;margin-top:10px}
-.section{margin:28px 0}.section h2{font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 12px;color:var(--accent)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;margin:10px 0}
-summary{cursor:pointer;list-style:none;font-weight:800;display:flex;justify-content:space-between;gap:14px}summary::-webkit-details-marker{display:none}
-summary span{color:var(--muted);font-size:13px;font-weight:600}
-details[open] summary{margin-bottom:12px}.muted{color:var(--muted)}.quote{font-size:20px;line-height:1.35;font-weight:750}
-.timeline{border-left:1px solid var(--line);padding-left:18px}.job{position:relative;margin:0 0 22px}.job:before{content:"";width:9px;height:9px;background:var(--accent);border-radius:50%;position:absolute;left:-23px;top:7px}.job h3{margin:0;font-size:18px}.job .meta{font-size:12px;color:var(--muted);margin:2px 0 8px}.badge{display:inline-block;background:#e7eee9;color:var(--accent);padding:4px 8px;border-radius:7px;font-size:10px;font-weight:900;letter-spacing:.08em}
-ul{padding-left:19px;margin:8px 0}.skill{display:flex;align-items:flex-start;gap:12px}.skill b{min-width:145px}.skill p{margin:0;color:var(--muted)}
-.lang{display:grid;grid-template-columns:1fr auto;gap:8px;border-bottom:1px solid var(--line);padding:11px 0}.lang:last-child{border-bottom:0}.level{font-weight:800;color:var(--accent)}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:10px}.contact a{border:1px solid var(--line);padding:13px;border-radius:13px;background:var(--card);font-weight:800}
-footer{text-align:center;color:var(--muted);font-size:12px;padding-top:35px}
-@media(max-width:520px){.skill{display:block}.skill b{display:block;margin-bottom:2px}.contact{grid-template-columns:1fr}}
+:root{--bg:#f5f4ef;--card:#fff;--ink:#151515;--muted:#686868;--line:#dedbd2;--accent:#151515}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}
+.wrap{max-width:1050px;margin:auto;padding:24px}
+header{min-height:72vh;display:flex;align-items:center;padding:70px 0 45px}
+.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:var(--muted);font-weight:700}
+h1{font-size:clamp(52px,10vw,105px);line-height:.88;letter-spacing:-.07em;margin:18px 0 25px;max-width:850px}
+.hero p{font-size:clamp(19px,3vw,27px);max-width:720px;margin:0 0 32px;color:#353535}
+.cta{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-block;text-decoration:none;padding:13px 18px;border:1px solid var(--ink);border-radius:999px;color:var(--ink);font-weight:700}.btn.dark{background:var(--ink);color:white}
+nav{position:sticky;top:0;z-index:10;background:rgba(245,244,239,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:10px 0}
+nav .navin{max-width:1050px;margin:auto;padding:0 24px;display:flex;gap:18px;overflow:auto}nav a{white-space:nowrap;color:var(--ink);text-decoration:none;font-size:13px;font-weight:700}
+section{padding:70px 0;border-top:1px solid var(--line)}h2{font-size:clamp(34px,6vw,58px);letter-spacing:-.05em;margin:0 0 30px}.intro{max-width:760px;font-size:20px;color:#444}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}.card h3{margin:0 0 8px;font-size:21px}.meta{color:var(--muted);font-size:14px;margin-bottom:14px}
+details{background:var(--card);border:1px solid var(--line);border-radius:18px;margin:12px 0;overflow:hidden}summary{cursor:pointer;padding:21px 24px;font-size:19px;font-weight:800;list-style:none}summary::-webkit-details-marker{display:none}.detail{padding:0 24px 24px}.detail p{color:#444}.tagrow{display:flex;gap:9px;flex-wrap:wrap}.tag{padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:#faf9f5;font-size:14px;font-weight:700}
+.skill{padding:18px 0;border-bottom:1px solid var(--line)}.skill:last-child{border-bottom:0}.skill strong{font-size:18px}.skill em{display:block;color:var(--muted);font-style:normal;margin-top:4px}
+.timeline{border-left:2px solid var(--line);padding-left:24px}.job{position:relative;margin:0 0 34px}.job:before{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:var(--ink);left:-30px;top:8px}.job h3{margin:0;font-size:21px}.job .meta{margin:3px 0 10px}.job ul{margin:8px 0 0;padding-left:20px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contact a{color:var(--ink);font-weight:700}
+footer{padding:50px 0 80px;color:var(--muted);font-size:13px}
+@media(max-width:700px){.grid,.contact{grid-template-columns:1fr}header{min-height:68vh;padding-top:45px}.wrap{padding:20px}nav .navin{padding:0 20px}}
 </style>
 </head>
 <body>
-<div class="wrap">
-<section class="hero">
-  <div class="kicker">Digital CV · Hospitality · Europe</div>
-  <h1>Jakub<br>Oravec</h1>
-  <p class="tagline"><strong>Hospitality • Guest Experience • Tourism</strong><br>People, travel, dynamic environments — and a strong watersports background.</p>
-  <div class="chips"><span class="chip">🏨 Resorts</span><span class="chip">🏕️ Camping / Glamping</span><span class="chip">🎪 Events</span><span class="chip">🌊 Watersports</span></div>
-  <a class="cta" href="#explore">Explore my CV ↓</a>
+<nav><div class="navin">
+<a href="#about">ABOUT</a><a href="#profile">PROFILE</a><a href="#experience">EXPERIENCE</a><a href="#skills">SKILLS</a><a href="#education">EDUCATION</a><a href="#languages">LANGUAGES</a><a href="#contact">CONTACT</a>
+</div></nav>
+
+<main class="wrap">
+<header>
+<div class="hero">
+<div class="eyebrow">Hospitality • Guest Relations • Customer Experience</div>
+<h1>More than a resume.</h1>
+<p>People-oriented, adaptable and solution-focused. International hospitality experience with a strong work ethic and a genuine interest in creating great guest experiences.</p>
+<div class="cta"><a class="btn dark" href="#profile">Explore my profile ↓</a><a class="btn" href="Jakub-Oravec-CV.pdf" target="_blank">Download CV</a></div>
+</div>
+</header>
+
+<section id="about">
+<div class="eyebrow">01 / About</div><h2>Get to know me.</h2>
+<p class="intro">I am a motivated and reliable hospitality worker with international experience in a 5-star luxury resort, surf hostel and co-living environment. I enjoy working with people, staying active and finding practical solutions when things get busy.</p>
 </section>
 
-<div id="explore">
-<section class="section">
-<h2>👋 About me</h2>
-<div class="card">
-<p class="quote">“I enjoy working with people, discovering new places and being part of dynamic environments.”</p>
-<p>I bring experience from a 5★ luxury resort in Mallorca, surf hostel and co-living environments in Spain, international teams, retail and watersports. I’m looking for seasonal or long-term opportunities across Europe.</p>
+<section id="profile">
+<div class="eyebrow">02 / Hospitality profile</div><h2>What I bring.</h2>
+<div class="grid">
+<div class="card"><h3>Experienced</h3><p>Guest service, pool & beach operations, housekeeping, food running and reception support in international environments.</p></div>
+<div class="card"><h3>Strong</h3><p>Communication, teamwork, flexibility, responsibility, discipline and a strong work ethic.</p></div>
+<div class="card"><h3>Familiar</h3><p>Fast-paced hospitality operations, multicultural teams, guest activities and day-to-day facility support.</p></div>
+<div class="card"><h3>Ready</h3><p>Seasonal or long-term hospitality opportunities across Europe — especially guest-facing and team-based roles.</p></div>
 </div>
 </section>
 
-<section class="section">
-<h2>💼 Experience</h2>
+<section id="experience">
+<div class="eyebrow">03 / Experience</div><h2>Where I've worked.</h2>
 <div class="timeline">
-<div class="job"><span class="badge">FEATURED · 5★ RESORT</span><h3>Pool & Beach Attendant · IKOS Porto Petro</h3><div class="meta">Mallorca, Spain · Apr 2025 — Sep 2025</div><ul><li>Pool & beach preparation and maintenance</li><li>Guest assistance and high-quality service</li><li>Daily operations, cleanliness and safety</li><li>Pool-bar Food Runner support</li></ul></div>
-<div class="job"><h3>Retailer · Marco Italiano</h3><div class="meta">Bratislava · Dec 2025 — Mar 2026</div><ul><li>Customer advice on specialty Italian products</li><li>Fresh meat & cheese counter responsibility</li></ul></div>
-<div class="job"><h3>Guest & Operations Volunteer · Co-living & Surf Hostel</h3><div class="meta">Gijón & Tenerife, Spain · Apr 2024 — Aug 2024</div><ul><li>Check-in / check-out and guest communication</li><li>Housekeeping, laundry and common areas</li><li>Guest activities: hikes, events, pizza nights</li><li>General facility support</li></ul></div>
-<div class="job"><h3>Marketing & Content Assistant · Etactics Inc.</h3><div class="meta">Hudson, Ohio, USA · Apr 2023 — Sep 2024</div><ul><li>Short-form video content for TikTok, YouTube and blogs</li><li>Basic CRM/data tasks and English communication</li></ul></div>
-<div class="job"><h3>Motorboat Driver & Waterski Trainer · Waterski & Watersports Club</h3><div class="meta">Piešťany · May 2017 — Sep 2021</div><ul><li>Waterski training and athlete support</li><li>Motorboat operation and safety procedures</li></ul></div>
+<div class="job"><h3>Marco Italiano — Retailer</h3><div class="meta">Bratislava • Dec 2025 — Mar 2026</div><ul><li>Sales and customer advice for specialty Italian products.</li><li>Responsible for a fresh meat and cheese counter.</li></ul></div>
+<div class="job"><h3>IKOS PORTO PETRO S.A. — Pool & Beach Attendant</h3><div class="meta">Porto Petro, Mallorca • Apr 2025 — Sep 2025</div><ul><li>Prepared and maintained pool & beach areas.</li><li>Assisted guests and provided high-quality service.</li><li>Supported daily operations, cleanliness and safety.</li><li>Worked as a Food Runner in the pool bar.</li><li>Worked in a fast-paced 5-star luxury resort.</li></ul></div>
+<div class="job"><h3>Co-living & Surf Hostel — Volunteer</h3><div class="meta">Gijón & Tenerife, Spain • Apr 2024 — Aug 2024</div><ul><li>Reception support, check-in/out and guest communication.</li><li>Housekeeping, laundry and common-area preparation.</li><li>Organised guest activities, hikes, events and pizza nights.</li><li>General facility support and basic maintenance.</li></ul></div>
+<div class="job"><h3>ETACTICS INC. — Marketing & Content Assistant</h3><div class="meta">Hudson, Ohio, USA • Apr 2023 — Sep 2024</div><ul><li>Created short-form videos and blog content.</li><li>Supported CRM and data tasks.</li><li>Communicated in English with an international team.</li></ul></div>
+<div class="job"><h3>Waterski & Watersports Club — Motorboat Driver & Waterski Trainer</h3><div class="meta">Piešťany • May 2017 — Sep 2021</div><ul><li>Assisted with waterski training sessions.</li><li>Operated motorboats and handled safety procedures.</li><li>Supported athletes and club visitors.</li></ul></div>
+<div class="job"><h3>Retail & Warehouse Assistant — Brigades</h3><div class="meta">Jan 2017 — Dec 2020</div><ul><li>Stocking, packing and organising orders.</li><li>Customer service, shop assistance and cash register operation.</li></ul></div>
 </div>
 </section>
 
-<section class="section">
-<h2>🏨 Hospitality profile</h2>
-<details class="card" open><summary>Guest Service <span>Experienced / Strong / Familiar</span></summary><p class="muted">Select your preferred level directly on the live site.</p></details>
-<details class="card"><summary>Pool & Beach Operations <span>Experienced / Strong / Familiar</span></summary><p class="muted">Hands-on experience in a 5★ resort environment.</p></details>
-<details class="card"><summary>Reception Support <span>Experienced / Strong / Familiar</span></summary><p class="muted">Check-in/out, guest communication and practical support.</p></details>
-<details class="card"><summary>Housekeeping <span>Experienced / Strong / Familiar</span></summary><p class="muted">Rooms, laundry and common-area preparation.</p></details>
-<details class="card"><summary>Guest Activities & Events <span>Experienced / Strong / Familiar</span></summary><p class="muted">Hikes, events, pizza nights and guest interaction.</p></details>
-</section>
-
-<section class="section">
-<h2>⭐ Soft skills</h2>
+<section id="skills">
+<div class="eyebrow">04 / Skills</div><h2>How I work.</h2>
+<div class="grid">
 <div class="card">
-<div class="skill"><b>Problem solving</b><p>“Let’s find a solution.”</p></div>
-<div class="skill"><b>Adaptability</b><p>Comfortable when plans, tasks or environments change.</p></div>
-<div class="skill"><b>Communication</b><p>Clear, direct and guest-focused communication.</p></div>
-<div class="skill"><b>Teamwork</b><p>Support the team and step in where needed.</p></div>
-<div class="skill"><b>Responsibility</b><p>If it’s my task, I take ownership.</p></div>
-<div class="skill"><b>Reliability</b><p>Consistent, punctual and ready to work.</p></div>
-<div class="skill"><b>Work ethic</b><p>Discipline shaped by competitive sport.</p></div>
+<div class="skill"><strong>Problem solving</strong><em>“Let's find a solution.”</em></div>
+<div class="skill"><strong>Communication</strong><em>Clear, friendly and confident with guests and colleagues.</em></div>
+<div class="skill"><strong>Teamwork</strong><em>Support the team, share responsibility and keep the energy positive.</em></div>
+<div class="skill"><strong>Adaptability</strong><em>Comfortable learning quickly and working in changing environments.</em></div>
+<div class="skill"><strong>Responsibility</strong><em>Reliable with tasks, guests, safety and daily operations.</em></div>
 </div>
-</section>
-
-<section class="section">
-<h2>💻 Hard skills</h2>
 <div class="card">
-<p><strong>MS Word · Excel · PowerPoint</strong></p>
-<p><strong>Adobe Premiere Pro</strong></p>
-<p><strong>Basic CRM & data tasks</strong></p>
-<p><strong>Motorboat operation & watersports safety</strong></p>
+<div class="skill"><strong>MS Office</strong><em>Word, Excel, PowerPoint</em></div>
+<div class="skill"><strong>Adobe Premiere Pro</strong><em>Short-form video and content editing.</em></div>
+<div class="skill"><strong>Guest service</strong><em>Guest communication and day-to-day support.</em></div>
+<div class="skill"><strong>Pool & beach operations</strong><em>Preparation, maintenance and safety support.</em></div>
+</div>
 </div>
 </section>
 
-<section class="section">
-<h2>🌍 Languages</h2>
-<div class="card">
-<div class="lang"><b>🇸🇰 Slovak</b><span class="level">Native</span></div>
-<div class="lang"><b>🇬🇧 English</b><span class="level">Fluent</span></div>
-<div class="lang"><b>🇨🇿 Czech</b><span class="level">Fluent</span></div>
-<div class="lang"><b>🇪🇸 Spanish</b><span class="level">Conversational</span></div>
-<div class="lang"><b>🇩🇪 German</b><span class="level">Beginner</span></div>
+<section id="education">
+<div class="eyebrow">05 / Education</div><h2>Education.</h2>
+<details><summary>Agroecology — Mendel University in Brno</summary><div class="detail">Brno, Czech Republic • Sep 2020 — Jun 2021</div></details>
+<details><summary>Biotechnology — Slovak University of Agriculture in Nitra</summary><div class="detail">Nitra, Slovak Republic • Sep 2018 — Dec 2019</div></details>
+<details><summary>Gymnasium Pierra de Coubertin</summary><div class="detail">Piešťany, Slovak Republic • Sep 2014 — Jun 2018</div></details>
+</section>
+
+<section id="languages">
+<div class="eyebrow">06 / Languages</div><h2>Communication.</h2>
+<div class="tagrow">
+<span class="tag">🇸🇰 Slovak — Native</span>
+<span class="tag">🇬🇧 English — Fluent</span>
+<span class="tag">🇨🇿 Czech — Advanced</span>
+<span class="tag">🇪🇸 Spanish — Conversational</span>
+<span class="tag">🇩🇪 German — Basic</span>
 </div>
 </section>
 
-<section class="section">
-<h2>🌊 Waters & outdoors</h2>
-<div class="card">
-<p class="quote">More than a hobby.</p>
-<p>Watersports have been a major part of my life — from competitive waterskiing to training athletes, operating motorboats and working around water-based activities.</p>
-<p class="muted">Former Slovak national team athlete · waterski · travel · nature · fitness</p>
-</div>
-</section>
-
-<section class="section">
-<h2>🎓 Education</h2>
-<div class="card"><strong>Agroecology</strong><br><span class="muted">Mendel University in Brno · 2020–2021</span></div>
-<div class="card"><strong>Biotechnology</strong><br><span class="muted">Slovak University of Agriculture in Nitra · 2018–2019</span></div>
-<div class="card"><strong>General Gymnasium</strong><br><span class="muted">Gymnasium Pierre de Coubertin, Piešťany · 2014–2018</span></div>
-</section>
-
-<section class="section">
-<h2>📸 My experience</h2>
-<div class="card"><p><strong>Gallery coming next.</strong></p><p class="muted">Mallorca · Tenerife · Gijón · Watersports · Events · Travel</p></div>
-</section>
-
-<section class="section">
-<h2>📞 Contact</h2>
+<section id="contact">
+<div class="eyebrow">07 / Contact</div><h2>Let's connect.</h2>
 <div class="contact">
-<a href="tel:+421918048320">📱 Call me</a>
-<a href="mailto:jakub.oravec11@gmail.com">✉️ Email</a>
-<a href="#">💼 LinkedIn</a>
-<a href="Jakub-Oravec-CV.pdf">📄 Download CV</a>
+<div class="card"><h3>Email</h3><a href="mailto:jakub.oravec11@gmail.com">jakub.oravec11@gmail.com</a></div>
+<div class="card"><h3>Phone</h3><a href="tel:+421918048320">+421 918 048 320</a></div>
 </div>
 </section>
-</div>
-<footer>Jakub Oravec · Digital CV · Europe</footer>
-</div>
+
+<footer>© Jakub Oravec • Hospitality & Customer Experience • <a href="Jakub-Oravec-CV.pdf" style="color:inherit">CV PDF</a></footer>
+</main>
 </body>
 </html>
