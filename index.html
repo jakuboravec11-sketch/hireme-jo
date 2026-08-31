@@ -11,8 +11,11 @@
 .wrap{max-width:1050px;margin:auto;padding:24px}
 header{min-height:72vh;display:flex;align-items:center;padding:70px 0 45px}
 .eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:var(--muted);font-weight:700}
-h1{font-size:clamp(52px,10vw,105px);line-height:.88;letter-spacing:-.07em;margin:18px 0 25px;max-width:850px}
-.hero p{font-size:clamp(19px,3vw,27px);max-width:720px;margin:0 0 32px;color:#353535}
+h1{font-size:clamp(52px,10vw,105px);line-height:.88;letter-spacing:-.07em;margin:18px 0 25px;max-width:850px}h1 span{font-style:italic}
+.hero{width:100%;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:45px;align-items:center}.hero p{font-size:clamp(19px,3vw,27px);max-width:720px;margin:0 0 32px;color:#353535}
+.photo-placeholder{aspect-ratio:4/5;border-radius:28px;background:#dedbd2;display:grid;place-items:center;overflow:hidden}.photo-inner{text-align:center;color:#777;letter-spacing:.12em;font-weight:800}.photo-inner small{display:block;margin-top:8px;letter-spacing:.04em;font-weight:500}
+.reveal{animation:rise .7s ease both}.hero-copy{animation:rise .7s ease both}.photo-placeholder{animation:rise .9s .1s ease both}@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
 .cta{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-block;text-decoration:none;padding:13px 18px;border:1px solid var(--ink);border-radius:999px;color:var(--ink);font-weight:700}.btn.dark{background:var(--ink);color:white}
 nav{position:sticky;top:0;z-index:10;background:rgba(245,244,239,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:10px 0}
 nav .navin{max-width:1050px;margin:auto;padding:0 24px;display:flex;gap:18px;overflow:auto}nav a{white-space:nowrap;color:var(--ink);text-decoration:none;font-size:13px;font-weight:700}
@@ -23,21 +26,30 @@ details{background:var(--card);border:1px solid var(--line);border-radius:18px;m
 .timeline{border-left:2px solid var(--line);padding-left:24px}.job{position:relative;margin:0 0 34px}.job:before{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:var(--ink);left:-30px;top:8px}.job h3{margin:0;font-size:21px}.job .meta{margin:3px 0 10px}.job ul{margin:8px 0 0;padding-left:20px}
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contact a{color:var(--ink);font-weight:700}
 footer{padding:50px 0 80px;color:var(--muted);font-size:13px}
-@media(max-width:700px){.grid,.contact{grid-template-columns:1fr}header{min-height:68vh;padding-top:45px}.wrap{padding:20px}nav .navin{padding:0 20px}}
+ .photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.mini-photo{aspect-ratio:1/1;border-radius:20px;background:#e5e2da;display:grid;place-items:center;text-align:center;font-size:12px;letter-spacing:.12em;font-weight:800;color:#777}.mini-photo small{font-size:10px;letter-spacing:.04em;font-weight:500}
+@media(max-width:700px){.grid,.contact{grid-template-columns:1fr}.hero{grid-template-columns:1fr;gap:28px}.photo-placeholder{max-width:360px;width:100%;justify-self:center}header{min-height:68vh;padding-top:45px}.wrap{padding:20px}nav .navin{padding:0 20px}.photo-grid{grid-template-columns:1fr 1fr}.photo-grid .mini-photo:last-child{grid-column:1/-1;max-width:50%;justify-self:center;width:100%}}
 </style>
 </head>
 <body>
 <nav><div class="navin">
-<a href="#about">ABOUT</a><a href="#profile">PROFILE</a><a href="#experience">EXPERIENCE</a><a href="#skills">SKILLS</a><a href="#education">EDUCATION</a><a href="#languages">LANGUAGES</a><a href="#contact">CONTACT</a>
+<a href="#about">ABOUT</a><a href="#profile">PROFILE</a><a href="#why">WHY ME</a><a href="#experience">EXPERIENCE</a><a href="#skills">SKILLS</a><a href="#education">EDUCATION</a><a href="#languages">LANGUAGES</a><a href="#life">LIFE</a><a href="#contact">CONTACT</a>
 </div></nav>
 
 <main class="wrap">
 <header>
 <div class="hero">
+<div class="hero-copy">
 <div class="eyebrow">Hospitality • Guest Relations • Customer Experience</div>
-<h1>More than a resume.</h1>
+<h1>More than<br><span>a resume.</span></h1>
 <p>People-oriented, adaptable and solution-focused. International hospitality experience with a strong work ethic and a genuine interest in creating great guest experiences.</p>
 <div class="cta"><a class="btn dark" href="#profile">Explore my profile ↓</a><a class="btn" href="Jakub-Oravec-CV.pdf" target="_blank">Download CV</a></div>
+</div>
+<div class="photo-placeholder">
+  <div class="photo-inner">
+    <span>YOUR PHOTO</span>
+    <small>profile.jpg</small>
+  </div>
+</div>
 </div>
 </header>
 
@@ -56,8 +68,18 @@ footer{padding:50px 0 80px;color:var(--muted);font-size:13px}
 </div>
 </section>
 
+<section id="why">
+<div class="eyebrow">03 / Why me?</div><h2>How I show up.</h2>
+<div class="grid">
+<div class="card"><h3>People person</h3><p>I genuinely enjoy working with guests and teams.</p></div>
+<div class="card"><h3>Problem solver</h3><p><strong>“Let's find a solution.”</strong></p></div>
+<div class="card"><h3>Adaptable</h3><p>New place. New team. New challenge. I'm ready.</p></div>
+<div class="card"><h3>Positive energy</h3><p>I bring a good attitude even when things get busy.</p></div>
+</div>
+</section>
+
 <section id="experience">
-<div class="eyebrow">03 / Experience</div><h2>Where I've worked.</h2>
+<div class="eyebrow">04 / Experience</div><h2>Where I've worked.</h2>
 <div class="timeline">
 <div class="job"><h3>Marco Italiano — Retailer</h3><div class="meta">Bratislava • Dec 2025 — Mar 2026</div><ul><li>Sales and customer advice for specialty Italian products.</li><li>Responsible for a fresh meat and cheese counter.</li></ul></div>
 <div class="job"><h3>IKOS PORTO PETRO S.A. — Pool & Beach Attendant</h3><div class="meta">Porto Petro, Mallorca • Apr 2025 — Sep 2025</div><ul><li>Prepared and maintained pool & beach areas.</li><li>Assisted guests and provided high-quality service.</li><li>Supported daily operations, cleanliness and safety.</li><li>Worked as a Food Runner in the pool bar.</li><li>Worked in a fast-paced 5-star luxury resort.</li></ul></div>
@@ -69,7 +91,7 @@ footer{padding:50px 0 80px;color:var(--muted);font-size:13px}
 </section>
 
 <section id="skills">
-<div class="eyebrow">04 / Skills</div><h2>How I work.</h2>
+<div class="eyebrow">05 / Skills</div><h2>How I work.</h2>
 <div class="grid">
 <div class="card">
 <div class="skill"><strong>Problem solving</strong><em>“Let's find a solution.”</em></div>
@@ -88,14 +110,14 @@ footer{padding:50px 0 80px;color:var(--muted);font-size:13px}
 </section>
 
 <section id="education">
-<div class="eyebrow">05 / Education</div><h2>Education.</h2>
+<div class="eyebrow">06 / Education</div><h2>Education.</h2>
 <details><summary>Agroecology — Mendel University in Brno</summary><div class="detail">Brno, Czech Republic • Sep 2020 — Jun 2021</div></details>
 <details><summary>Biotechnology — Slovak University of Agriculture in Nitra</summary><div class="detail">Nitra, Slovak Republic • Sep 2018 — Dec 2019</div></details>
 <details><summary>Gymnasium Pierra de Coubertin</summary><div class="detail">Piešťany, Slovak Republic • Sep 2014 — Jun 2018</div></details>
 </section>
 
 <section id="languages">
-<div class="eyebrow">06 / Languages</div><h2>Communication.</h2>
+<div class="eyebrow">07 / Languages</div><h2>Communication.</h2>
 <div class="tagrow">
 <span class="tag">🇸🇰 Slovak — Native</span>
 <span class="tag">🇬🇧 English — Fluent</span>
@@ -105,8 +127,18 @@ footer{padding:50px 0 80px;color:var(--muted);font-size:13px}
 </div>
 </section>
 
+<section id="life">
+<div class="eyebrow">07.5 / Beyond work</div><h2>Life outside the CV.</h2>
+<p class="intro">A few real moments can say more than another paragraph. Photos from hospitality, watersports, travel or team environments can live here.</p>
+<div class="photo-grid">
+<div class="mini-photo">HOSPITALITY<br><small>hospitality.jpg</small></div>
+<div class="mini-photo">WATERSPORTS<br><small>watersports.jpg</small></div>
+<div class="mini-photo">TRAVEL / TEAM<br><small>travel.jpg</small></div>
+</div>
+</section>
+
 <section id="contact">
-<div class="eyebrow">07 / Contact</div><h2>Let's connect.</h2>
+<div class="eyebrow">08 / Contact</div><h2>Let's connect.</h2>
 <div class="contact">
 <div class="card"><h3>Email</h3><a href="mailto:jakub.oravec11@gmail.com">jakub.oravec11@gmail.com</a></div>
 <div class="card"><h3>Phone</h3><a href="tel:+421918048320">+421 918 048 320</a></div>
