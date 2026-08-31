@@ -1,151 +1,134 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Jakub Oravec — Hospitality, Guest Relations & Customer Experience">
-<title>Jakub Oravec | Hospitality</title>
-<style>
-:root{--bg:#f5f4ef;--card:#fff;--ink:#151515;--muted:#686868;--line:#dedbd2;--accent:#151515}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}
-.wrap{max-width:1050px;margin:auto;padding:24px}
-header{min-height:72vh;display:flex;align-items:center;padding:70px 0 45px}
-.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:var(--muted);font-weight:700}
-h1{font-size:clamp(52px,10vw,105px);line-height:.88;letter-spacing:-.07em;margin:18px 0 25px;max-width:850px}h1 span{font-style:italic}
-.hero{width:100%;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:45px;align-items:center}.hero p{font-size:clamp(19px,3vw,27px);max-width:720px;margin:0 0 32px;color:#353535}
-.photo-placeholder{aspect-ratio:4/5;border-radius:28px;background:#dedbd2;display:grid;place-items:center;overflow:hidden}.photo-inner{text-align:center;color:#777;letter-spacing:.12em;font-weight:800}.photo-inner small{display:block;margin-top:8px;letter-spacing:.04em;font-weight:500}
-.reveal{animation:rise .7s ease both}.hero-copy{animation:rise .7s ease both}.photo-placeholder{animation:rise .9s .1s ease both}@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-
-.cta{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-block;text-decoration:none;padding:13px 18px;border:1px solid var(--ink);border-radius:999px;color:var(--ink);font-weight:700}.btn.dark{background:var(--ink);color:white}
-nav{position:sticky;top:0;z-index:10;background:rgba(245,244,239,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:10px 0}
-nav .navin{max-width:1050px;margin:auto;padding:0 24px;display:flex;gap:18px;overflow:auto}nav a{white-space:nowrap;color:var(--ink);text-decoration:none;font-size:13px;font-weight:700}
-section{padding:70px 0;border-top:1px solid var(--line)}h2{font-size:clamp(34px,6vw,58px);letter-spacing:-.05em;margin:0 0 30px}.intro{max-width:760px;font-size:20px;color:#444}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}.card h3{margin:0 0 8px;font-size:21px}.meta{color:var(--muted);font-size:14px;margin-bottom:14px}
-details{background:var(--card);border:1px solid var(--line);border-radius:18px;margin:12px 0;overflow:hidden}summary{cursor:pointer;padding:21px 24px;font-size:19px;font-weight:800;list-style:none}summary::-webkit-details-marker{display:none}.detail{padding:0 24px 24px}.detail p{color:#444}.tagrow{display:flex;gap:9px;flex-wrap:wrap}.tag{padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:#faf9f5;font-size:14px;font-weight:700}
-.skill{padding:18px 0;border-bottom:1px solid var(--line)}.skill:last-child{border-bottom:0}.skill strong{font-size:18px}.skill em{display:block;color:var(--muted);font-style:normal;margin-top:4px}
-.timeline{border-left:2px solid var(--line);padding-left:24px}.job{position:relative;margin:0 0 34px}.job:before{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:var(--ink);left:-30px;top:8px}.job h3{margin:0;font-size:21px}.job .meta{margin:3px 0 10px}.job ul{margin:8px 0 0;padding-left:20px}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contact a{color:var(--ink);font-weight:700}
-footer{padding:50px 0 80px;color:var(--muted);font-size:13px}
- .photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.mini-photo{aspect-ratio:1/1;border-radius:20px;background:#e5e2da;display:grid;place-items:center;text-align:center;font-size:12px;letter-spacing:.12em;font-weight:800;color:#777}.mini-photo small{font-size:10px;letter-spacing:.04em;font-weight:500}
-@media(max-width:700px){.grid,.contact{grid-template-columns:1fr}.hero{grid-template-columns:1fr;gap:28px}.photo-placeholder{max-width:360px;width:100%;justify-self:center}header{min-height:68vh;padding-top:45px}.wrap{padding:20px}nav .navin{padding:0 20px}.photo-grid{grid-template-columns:1fr 1fr}.photo-grid .mini-photo:last-child{grid-column:1/-1;max-width:50%;justify-self:center;width:100%}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jakub Oravec — Hospitality • People • Experience</title>
+  <meta name="description" content="Jakub Oravec — hospitality, guest relations, teamwork and experience-driven service.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav><div class="navin">
-<a href="#about">ABOUT</a><a href="#profile">PROFILE</a><a href="#why">WHY ME</a><a href="#experience">EXPERIENCE</a><a href="#skills">SKILLS</a><a href="#education">EDUCATION</a><a href="#languages">LANGUAGES</a><a href="#life">LIFE</a><a href="#contact">CONTACT</a>
-</div></nav>
+  <header class="nav">
+    <a class="brand" href="#top">JO<span>.</span></a>
+    <nav>
+      <a href="#story">Story</a>
+      <a href="#experience">Experience</a>
+      <a href="#life">Life</a>
+      <a class="nav-cta" href="#contact">Let's talk ↗</a>
+    </nav>
+  </header>
 
-<main class="wrap">
-<header>
-<div class="hero">
-<div class="hero-copy">
-<div class="eyebrow">Hospitality • Guest Relations • Customer Experience</div>
-<h1>More than<br><span>a resume.</span></h1>
-<p>People-oriented, adaptable and solution-focused. International hospitality experience with a strong work ethic and a genuine interest in creating great guest experiences.</p>
-<div class="cta"><a class="btn dark" href="#profile">Explore my profile ↓</a><a class="btn" href="Jakub-Oravec-CV.pdf" target="_blank">Download CV</a></div>
-</div>
-<div class="photo-placeholder">
-  <div class="photo-inner">
-    <span>YOUR PHOTO</span>
-    <small>profile.jpg</small>
-  </div>
-</div>
-</div>
-</header>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">HOSPITALITY • PEOPLE • TRAVEL</p>
+        <h1>I make people<br><em>feel welcome.</em></h1>
+        <p class="lead">A people-first hospitality professional who enjoys fast-paced environments, international teams and creating experiences guests remember.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#experience">Explore my story <span>↓</span></a>
+          <a class="button ghost" href="Jakub-Oravec-CV.pdf" target="_blank" rel="noopener">View CV ↗</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/hero.png" alt="Jakub Oravec">
+        <div class="photo-tag">AVAILABLE FOR<br><strong>THE NEXT ADVENTURE</strong></div>
+      </div>
+    </section>
 
-<section id="about">
-<div class="eyebrow">01 / About</div><h2>Get to know me.</h2>
-<p class="intro">I am a motivated and reliable hospitality worker with international experience in a 5-star luxury resort, surf hostel and co-living environment. I enjoy working with people, staying active and finding practical solutions when things get busy.</p>
-</section>
+    <section class="ticker" aria-label="Highlights">
+      <div>GUEST RELATIONS</div><div>TEAM PLAYER</div><div>ENERGY</div><div>INTERNATIONAL</div><div>OUTDOOR</div><div>COMMUNITY</div>
+    </section>
 
-<section id="profile">
-<div class="eyebrow">02 / Hospitality profile</div><h2>What I bring.</h2>
-<div class="grid">
-<div class="card"><h3>Experienced</h3><p>Guest service, pool & beach operations, housekeeping, food running and reception support in international environments.</p></div>
-<div class="card"><h3>Strong</h3><p>Communication, teamwork, flexibility, responsibility, discipline and a strong work ethic.</p></div>
-<div class="card"><h3>Familiar</h3><p>Fast-paced hospitality operations, multicultural teams, guest activities and day-to-day facility support.</p></div>
-<div class="card"><h3>Ready</h3><p>Seasonal or long-term hospitality opportunities across Europe — especially guest-facing and team-based roles.</p></div>
-</div>
-</section>
+    <section id="story" class="split section">
+      <div class="section-label">01 / STORY</div>
+      <div class="story-grid">
+        <div>
+          <h2>Not just a job.<br><span>An experience.</span></h2>
+        </div>
+        <div class="story-text">
+          <p>I’m at my best where people, movement and energy come together. Hospitality taught me that the smallest interaction can change someone’s day — and that great service is as much about attitude as it is about execution.</p>
+          <p>I bring a calm head, positive energy and a genuine interest in people. I’m comfortable in international environments and I enjoy becoming the person a team can rely on when things get busy.</p>
+          <div class="mini-stats">
+            <div><strong>People</strong><span>first mindset</span></div>
+            <div><strong>English</strong><span>advanced</span></div>
+            <div><strong>Energy</strong><span>high pace</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section id="why">
-<div class="eyebrow">03 / Why me?</div><h2>How I show up.</h2>
-<div class="grid">
-<div class="card"><h3>People person</h3><p>I genuinely enjoy working with guests and teams.</p></div>
-<div class="card"><h3>Problem solver</h3><p><strong>“Let's find a solution.”</strong></p></div>
-<div class="card"><h3>Adaptable</h3><p>New place. New team. New challenge. I'm ready.</p></div>
-<div class="card"><h3>Positive energy</h3><p>I bring a good attitude even when things get busy.</p></div>
-</div>
-</section>
+    <section id="experience" class="experience section">
+      <div class="section-label">02 / EXPERIENCE</div>
+      <div class="experience-head">
+        <h2>Where I <span>thrive.</span></h2>
+        <p>Resorts, hostels, camps, beach environments, guest-facing roles — anywhere the experience matters.</p>
+      </div>
+      <div class="feature-photo">
+        <img src="assets/resort-team.jpg" alt="International hospitality team at a resort">
+        <div class="overlay-card">
+          <span>THE TEAM</span>
+          <strong>Good energy is contagious.</strong>
+          <p>International teamwork, guest interaction and a shared goal: make the day better.</p>
+        </div>
+      </div>
 
-<section id="experience">
-<div class="eyebrow">04 / Experience</div><h2>Where I've worked.</h2>
-<div class="timeline">
-<div class="job"><h3>Marco Italiano — Retailer</h3><div class="meta">Bratislava • Dec 2025 — Mar 2026</div><ul><li>Sales and customer advice for specialty Italian products.</li><li>Responsible for a fresh meat and cheese counter.</li></ul></div>
-<div class="job"><h3>IKOS PORTO PETRO S.A. — Pool & Beach Attendant</h3><div class="meta">Porto Petro, Mallorca • Apr 2025 — Sep 2025</div><ul><li>Prepared and maintained pool & beach areas.</li><li>Assisted guests and provided high-quality service.</li><li>Supported daily operations, cleanliness and safety.</li><li>Worked as a Food Runner in the pool bar.</li><li>Worked in a fast-paced 5-star luxury resort.</li></ul></div>
-<div class="job"><h3>Co-living & Surf Hostel — Volunteer</h3><div class="meta">Gijón & Tenerife, Spain • Apr 2024 — Aug 2024</div><ul><li>Reception support, check-in/out and guest communication.</li><li>Housekeeping, laundry and common-area preparation.</li><li>Organised guest activities, hikes, events and pizza nights.</li><li>General facility support and basic maintenance.</li></ul></div>
-<div class="job"><h3>ETACTICS INC. — Marketing & Content Assistant</h3><div class="meta">Hudson, Ohio, USA • Apr 2023 — Sep 2024</div><ul><li>Created short-form videos and blog content.</li><li>Supported CRM and data tasks.</li><li>Communicated in English with an international team.</li></ul></div>
-<div class="job"><h3>Waterski & Watersports Club — Motorboat Driver & Waterski Trainer</h3><div class="meta">Piešťany • May 2017 — Sep 2021</div><ul><li>Assisted with waterski training sessions.</li><li>Operated motorboats and handled safety procedures.</li><li>Supported athletes and club visitors.</li></ul></div>
-<div class="job"><h3>Retail & Warehouse Assistant — Brigades</h3><div class="meta">Jan 2017 — Dec 2020</div><ul><li>Stocking, packing and organising orders.</li><li>Customer service, shop assistance and cash register operation.</li></ul></div>
-</div>
-</section>
+      <div class="cards">
+        <article>
+          <span>01</span><h3>Guest Relations</h3>
+          <p>Friendly, attentive and proactive — from first hello to the last goodbye.</p>
+        </article>
+        <article>
+          <span>02</span><h3>Team Energy</h3>
+          <p>I like busy shifts, clear communication and being the person who steps in.</p>
+        </article>
+        <article>
+          <span>03</span><h3>Adaptability</h3>
+          <p>New country, new team, new challenge. I learn quickly and get involved.</p>
+        </article>
+      </div>
 
-<section id="skills">
-<div class="eyebrow">05 / Skills</div><h2>How I work.</h2>
-<div class="grid">
-<div class="card">
-<div class="skill"><strong>Problem solving</strong><em>“Let's find a solution.”</em></div>
-<div class="skill"><strong>Communication</strong><em>Clear, friendly and confident with guests and colleagues.</em></div>
-<div class="skill"><strong>Teamwork</strong><em>Support the team, share responsibility and keep the energy positive.</em></div>
-<div class="skill"><strong>Adaptability</strong><em>Comfortable learning quickly and working in changing environments.</em></div>
-<div class="skill"><strong>Responsibility</strong><em>Reliable with tasks, guests, safety and daily operations.</em></div>
-</div>
-<div class="card">
-<div class="skill"><strong>MS Office</strong><em>Word, Excel, PowerPoint</em></div>
-<div class="skill"><strong>Adobe Premiere Pro</strong><em>Short-form video and content editing.</em></div>
-<div class="skill"><strong>Guest service</strong><em>Guest communication and day-to-day support.</em></div>
-<div class="skill"><strong>Pool & beach operations</strong><em>Preparation, maintenance and safety support.</em></div>
-</div>
-</div>
-</section>
+      <div class="work-grid">
+        <div class="work-image tall"><img src="assets/work-candid.jpg" alt="Jakub working with a colleague"></div>
+        <div class="work-copy">
+          <p class="eyebrow">REAL WORK. REAL PEOPLE.</p>
+          <h3>The best part of hospitality is the people you meet along the way.</h3>
+          <p>That’s why my portfolio is intentionally personal. The photos are not stock images — they are moments from real teams, real places and real work.</p>
+        </div>
+      </div>
+    </section>
 
-<section id="education">
-<div class="eyebrow">06 / Education</div><h2>Education.</h2>
-<details><summary>Agroecology — Mendel University in Brno</summary><div class="detail">Brno, Czech Republic • Sep 2020 — Jun 2021</div></details>
-<details><summary>Biotechnology — Slovak University of Agriculture in Nitra</summary><div class="detail">Nitra, Slovak Republic • Sep 2018 — Dec 2019</div></details>
-<details><summary>Gymnasium Pierra de Coubertin</summary><div class="detail">Piešťany, Slovak Republic • Sep 2014 — Jun 2018</div></details>
-</section>
+    <section id="life" class="life section">
+      <div class="section-label">03 / LIFE OUTSIDE THE SHIFT</div>
+      <div class="life-head">
+        <h2>Work hard.<br><span>Live even better.</span></h2>
+        <p>Travel, water, outdoors, new people and spontaneous plans are part of what keeps me curious.</p>
+      </div>
+      <div class="masonry">
+        <div class="masonry-main"><img src="assets/beach.jpg" alt="Beach and outdoor activity"></div>
+        <div><img src="assets/resort.jpg" alt="Resort cabanas"></div>
+        <div><img src="assets/asturias-1.jpg" alt="Friends sharing a meal"></div>
+        <div><img src="assets/asturias-2.jpg" alt="International group outdoors"></div>
+      </div>
+    </section>
 
-<section id="languages">
-<div class="eyebrow">07 / Languages</div><h2>Communication.</h2>
-<div class="tagrow">
-<span class="tag">🇸🇰 Slovak — Native</span>
-<span class="tag">🇬🇧 English — Fluent</span>
-<span class="tag">🇨🇿 Czech — Advanced</span>
-<span class="tag">🇪🇸 Spanish — Conversational</span>
-<span class="tag">🇩🇪 German — Basic</span>
-</div>
-</section>
+    <section id="contact" class="contact section">
+      <p class="eyebrow">04 / NEXT CHAPTER</p>
+      <h2>Let’s create a<br><em>great experience.</em></h2>
+      <p class="contact-copy">Looking for a dynamic hospitality opportunity in an international environment — ideally somewhere with people, movement and a story worth telling.</p>
+      <div class="contact-actions">
+        <a class="button primary" href="mailto:your-email@example.com">Get in touch ↗</a>
+        <a class="button ghost" href="Jakub-Oravec-CV.pdf" target="_blank" rel="noopener">Open CV ↗</a>
+      </div>
+    </section>
+  </main>
 
-<section id="life">
-<div class="eyebrow">07.5 / Beyond work</div><h2>Life outside the CV.</h2>
-<p class="intro">A few real moments can say more than another paragraph. Photos from hospitality, watersports, travel or team environments can live here.</p>
-<div class="photo-grid">
-<div class="mini-photo">HOSPITALITY<br><small>hospitality.jpg</small></div>
-<div class="mini-photo">WATERSPORTS<br><small>watersports.jpg</small></div>
-<div class="mini-photo">TRAVEL / TEAM<br><small>travel.jpg</small></div>
-</div>
-</section>
-
-<section id="contact">
-<div class="eyebrow">08 / Contact</div><h2>Let's connect.</h2>
-<div class="contact">
-<div class="card"><h3>Email</h3><a href="mailto:jakub.oravec11@gmail.com">jakub.oravec11@gmail.com</a></div>
-<div class="card"><h3>Phone</h3><a href="tel:+421918048320">+421 918 048 320</a></div>
-</div>
-</section>
-
-<footer>© Jakub Oravec • Hospitality & Customer Experience • <a href="Jakub-Oravec-CV.pdf" style="color:inherit">CV PDF</a></footer>
-</main>
+  <footer>
+    <span>JAKUB ORAVEC</span>
+    <span>HOSPITALITY • PEOPLE • EXPERIENCE</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
 </body>
 </html>
