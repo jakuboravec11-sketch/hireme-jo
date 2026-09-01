@@ -9,6 +9,7 @@
 <title>More than a resume. | Jakub Oravec</title>
 
 <style>
+
 :root{
   --bg:#f5f4ef;
   --card:#ffffff;
@@ -28,7 +29,27 @@ html{
 
 body{
   margin:0;
-  background:var(--bg);
+
+  background:
+    radial-gradient(
+      circle at 8% 12%,
+      rgba(240,90,67,.13) 0,
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 92% 35%,
+      rgba(255,190,80,.14) 0,
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 35% 85%,
+      rgba(90,170,190,.10) 0,
+      transparent 28%
+    ),
+    var(--bg);
+
+  background-attachment:fixed;
+
   color:var(--ink);
   font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   line-height:1.55;
@@ -44,23 +65,31 @@ a{
   padding:0 24px;
 }
 
-/* NAVIGATION */
+
+/* =========================
+   NAVIGATION
+========================= */
 
 nav{
   position:sticky;
   top:0;
   z-index:20;
-  background:rgba(245,244,239,.94);
+
+  background:rgba(245,244,239,.90);
   backdrop-filter:blur(14px);
+
   border-bottom:1px solid var(--line);
 }
 
 .navin{
   max-width:1080px;
   margin:auto;
+
   padding:13px 24px;
+
   display:flex;
   gap:24px;
+
   overflow-x:auto;
   scrollbar-width:none;
 }
@@ -71,49 +100,75 @@ nav{
 
 nav a{
   white-space:nowrap;
+
   text-decoration:none;
+
   font-size:12px;
   font-weight:800;
+
   letter-spacing:.08em;
 }
 
-/* HERO */
+nav a:hover{
+  opacity:.55;
+}
+
+
+/* =========================
+   HERO
+========================= */
 
 header{
   min-height:86vh;
+
   display:flex;
   align-items:center;
+
   padding:70px 0 90px;
 }
 
 .hero{
   width:100%;
+
   display:grid;
   grid-template-columns:minmax(0,1.25fr) minmax(250px,.75fr);
+
   gap:70px;
+
   align-items:center;
 }
 
 .eyebrow{
   text-transform:uppercase;
+
   letter-spacing:.16em;
+
   font-size:11px;
+
   color:var(--muted);
+
   font-weight:800;
 }
 
 h1{
   font-size:clamp(58px,10vw,112px);
+
   line-height:.88;
+
   letter-spacing:-.075em;
+
   margin:20px 0 28px;
+
   max-width:800px;
 }
 
 .hero-copy{
   font-size:clamp(19px,2.5vw,25px);
+
   max-width:650px;
+
   color:#353535;
+
   margin:0 0 32px;
 }
 
@@ -124,29 +179,48 @@ h1{
 
 .hero-photo img{
   width:min(100%,330px);
+
   aspect-ratio:4/5;
+
   object-fit:cover;
+
   border-radius:28px;
+
   display:block;
+
   filter:saturate(.92);
+
+  box-shadow:0 25px 60px rgba(0,0,0,.10);
 }
 
-/* BUTTONS */
+
+/* =========================
+   BUTTONS
+========================= */
 
 .cta{
   display:flex;
+
   gap:12px;
+
   flex-wrap:wrap;
 }
 
 .btn{
   display:inline-block;
+
   text-decoration:none;
+
   padding:13px 20px;
+
   border:1px solid var(--ink);
+
   border-radius:999px;
+
   font-weight:800;
+
   font-size:14px;
+
   transition:.2s ease;
 }
 
@@ -156,79 +230,120 @@ h1{
 
 .btn.dark{
   background:var(--ink);
+
   color:white;
 }
 
-/* SECTIONS */
+
+/* =========================
+   SECTIONS
+========================= */
 
 section{
   padding:90px 0;
+
   border-top:1px solid var(--line);
 }
 
 .section-head{
   display:flex;
+
   justify-content:space-between;
+
   align-items:flex-end;
+
   gap:30px;
+
   margin-bottom:38px;
 }
 
 h2{
   font-size:clamp(38px,6vw,64px);
+
   letter-spacing:-.06em;
+
   line-height:.95;
+
   margin:8px 0 0;
 }
 
 .intro{
   max-width:760px;
+
   font-size:20px;
+
   color:#444;
 }
 
-/* VALUE GRID */
+
+/* =========================
+   VALUE GRID
+========================= */
 
 .value-grid{
   display:grid;
+
   grid-template-columns:repeat(4,1fr);
+
   gap:14px;
 }
 
 .value{
-  background:var(--card);
+  background:rgba(255,255,255,.88);
+
   border:1px solid var(--line);
+
   border-radius:20px;
+
   padding:24px;
+
   min-height:180px;
+
+  transition:.2s ease;
+}
+
+.value:hover{
+  transform:translateY(-3px);
+
+  box-shadow:0 15px 35px rgba(0,0,0,.06);
 }
 
 .value-number{
   font-size:12px;
+
   font-weight:800;
+
   color:var(--muted);
 }
 
 .value h3{
   margin:38px 0 7px;
+
   font-size:21px;
 }
 
 .value p{
   margin:0;
+
   color:#555;
+
   font-size:14px;
 }
 
-/* EXPERIENCE */
+
+/* =========================
+   EXPERIENCE
+========================= */
 
 .timeline{
   border-left:2px solid var(--line);
+
   padding-left:28px;
 }
 
 .job{
   position:relative;
+
   margin-bottom:45px;
 }
 
@@ -238,42 +353,57 @@ h2{
 
 .job:before{
   content:"";
+
   position:absolute;
+
   width:11px;
   height:11px;
+
   border-radius:50%;
+
   background:var(--ink);
+
   left:-34px;
   top:8px;
 }
 
 .job-top{
   display:flex;
+
   justify-content:space-between;
+
   gap:20px;
+
   align-items:flex-start;
 }
 
 .job h3{
   margin:0;
+
   font-size:23px;
+
   letter-spacing:-.02em;
 }
 
 .job .role{
   margin-top:3px;
+
   font-weight:700;
 }
 
 .meta{
   color:var(--muted);
+
   font-size:13px;
+
   margin:5px 0 12px;
 }
 
 .job ul{
   margin:10px 0 0;
+
   padding-left:20px;
+
   color:#444;
 }
 
@@ -281,23 +411,32 @@ h2{
   margin:5px 0;
 }
 
-/* SKILLS */
+
+/* =========================
+   SKILLS
+========================= */
 
 .skills-layout{
   display:grid;
+
   grid-template-columns:1.25fr .75fr;
+
   gap:18px;
 }
 
 .card{
-  background:var(--card);
+  background:rgba(255,255,255,.90);
+
   border:1px solid var(--line);
+
   border-radius:22px;
+
   padding:28px;
 }
 
 .skill{
   padding:19px 0;
+
   border-bottom:1px solid var(--line);
 }
 
@@ -307,50 +446,73 @@ h2{
 
 .skill:last-child{
   border-bottom:0;
+
   padding-bottom:0;
 }
 
 .skill strong{
   display:block;
+
   font-size:19px;
 }
 
 .skill em{
   display:block;
+
   margin-top:4px;
+
   color:var(--muted);
+
   font-style:normal;
 }
 
-/* HARD SKILLS TAGS */
+
+/* =========================
+   HARD SKILLS
+========================= */
 
 .tagrow{
   display:flex;
+
   gap:9px;
+
   flex-wrap:wrap;
 }
 
 .tag{
   padding:9px 13px;
+
   border:1px solid var(--line);
+
   border-radius:999px;
+
   background:var(--soft);
+
   font-size:13px;
+
   font-weight:750;
 }
 
-/* INTERNATIONAL */
+
+/* =========================
+   INTERNATIONAL
+========================= */
 
 .country-grid{
   display:grid;
+
   grid-template-columns:repeat(3,1fr);
+
   gap:15px;
 }
 
 .country{
-  background:var(--card);
+  background:rgba(255,255,255,.90);
+
   border:1px solid var(--line);
+
   border-radius:20px;
+
   padding:25px;
 }
 
@@ -360,30 +522,44 @@ h2{
 
 .country h3{
   margin:14px 0 4px;
+
   font-size:21px;
 }
 
 .country p{
   margin:0;
+
   color:var(--muted);
+
   font-size:14px;
 }
 
-/* EDUCATION */
+
+/* =========================
+   EDUCATION
+========================= */
 
 details{
-  background:var(--card);
+  background:rgba(255,255,255,.90);
+
   border:1px solid var(--line);
+
   border-radius:18px;
+
   margin:12px 0;
+
   overflow:hidden;
 }
 
 summary{
   cursor:pointer;
+
   padding:21px 24px;
+
   font-size:18px;
+
   font-weight:800;
+
   list-style:none;
 }
 
@@ -393,22 +569,32 @@ summary::-webkit-details-marker{
 
 .detail{
   padding:0 24px 22px;
+
   color:var(--muted);
 }
 
-/* LANGUAGES */
+
+/* =========================
+   LANGUAGES
+========================= */
 
 .language-grid{
   display:grid;
+
   grid-template-columns:repeat(5,1fr);
+
   gap:10px;
 }
 
 .language{
-  background:var(--card);
+  background:rgba(255,255,255,.90);
+
   border:1px solid var(--line);
+
   border-radius:17px;
+
   padding:18px;
+
   text-align:center;
 }
 
@@ -418,21 +604,145 @@ summary::-webkit-details-marker{
 
 .language strong{
   display:block;
+
   margin-top:7px;
+
   font-size:14px;
 }
 
 .language span{
   color:var(--muted);
+
   font-size:12px;
 }
 
-/* CONTACT */
+
+/* =========================
+   PERSONAL LETTER
+========================= */
+
+.letter-intro{
+  max-width:820px;
+}
+
+.letter-details{
+  margin-top:30px;
+
+  background:rgba(255,255,255,.94);
+
+  border:1px solid var(--line);
+
+  border-radius:24px;
+
+  overflow:hidden;
+
+  box-shadow:0 15px 45px rgba(0,0,0,.04);
+}
+
+.letter-details summary{
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  padding:25px 28px;
+
+  cursor:pointer;
+
+  font-size:17px;
+
+  font-weight:800;
+
+  list-style:none;
+}
+
+.letter-details summary::-webkit-details-marker{
+  display:none;
+}
+
+.letter-details summary span{
+  font-size:24px;
+
+  transition:.25s ease;
+}
+
+.letter-details[open] summary{
+  border-bottom:1px solid var(--line);
+}
+
+.letter-details[open] summary span{
+  transform:rotate(180deg);
+}
+
+.letter{
+  max-width:780px;
+
+  padding:38px 30px 42px;
+
+  font-size:17px;
+
+  line-height:1.75;
+
+  color:#444;
+}
+
+.letter p{
+  margin:0 0 22px;
+}
+
+.letter strong{
+  color:var(--ink);
+}
+
+.letter-highlight{
+  margin:32px 0;
+
+  padding:25px 28px;
+
+  background:var(--soft);
+
+  border-left:4px solid var(--ink);
+
+  border-radius:0 15px 15px 0;
+}
+
+.letter-highlight span{
+  display:block;
+
+  font-size:10px;
+
+  font-weight:900;
+
+  letter-spacing:.14em;
+
+  color:var(--muted);
+
+  margin-bottom:7px;
+}
+
+.letter-highlight strong{
+  font-size:25px;
+
+  letter-spacing:-.03em;
+}
+
+.letter-sign{
+  margin-top:35px!important;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
 
 .contact-box{
   background:var(--ink);
+
   color:white;
+
   border-radius:28px;
+
   padding:45px;
 }
 
@@ -442,37 +752,57 @@ summary::-webkit-details-marker{
 
 .contact-box p{
   max-width:650px;
+
   color:#d0d0d0;
+
   font-size:18px;
 }
 
 .contact-links{
   display:flex;
+
   gap:12px;
+
   flex-wrap:wrap;
+
   margin-top:28px;
 }
 
 .contact-links a{
   text-decoration:none;
+
   background:white;
+
   color:var(--ink);
+
   padding:13px 18px;
+
   border-radius:999px;
+
   font-weight:800;
+
   font-size:14px;
 }
 
-/* FOOTER */
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
   padding:55px 0 80px;
+
   color:var(--muted);
+
   font-size:13px;
+
   text-align:center;
 }
 
-/* MOBILE */
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:800px){
 
@@ -482,32 +812,39 @@ footer{
 
   .navin{
     padding:12px 20px;
+
     gap:19px;
   }
 
   header{
     min-height:auto;
+
     padding:55px 0 65px;
   }
 
   .hero{
     grid-template-columns:1fr;
+
     gap:38px;
   }
 
   .hero-photo{
     order:-1;
+
     justify-content:flex-start;
   }
 
   .hero-photo img{
     width:190px;
+
     aspect-ratio:1;
+
     border-radius:50%;
   }
 
   h1{
     font-size:clamp(58px,17vw,88px);
+
     margin-top:16px;
   }
 
@@ -554,6 +891,21 @@ footer{
   .contact-box{
     padding:30px 24px;
   }
+
+  .letter{
+    padding:30px 23px 35px;
+
+    font-size:16px;
+  }
+
+  .letter-highlight{
+    padding:21px 22px;
+  }
+
+  .letter-highlight strong{
+    font-size:22px;
+  }
+
 }
 
 @media(max-width:480px){
@@ -572,39 +924,72 @@ footer{
 
   .btn{
     width:100%;
+
     text-align:center;
   }
+
+  .letter-details summary{
+    padding:22px;
+  }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
 <nav>
+
   <div class="navin">
+
     <a href="#profile">PROFILE</a>
+
     <a href="#experience">EXPERIENCE</a>
+
     <a href="#skills">SKILLS</a>
+
     <a href="#international">INTERNATIONAL</a>
+
     <a href="#education">EDUCATION</a>
+
     <a href="#languages">LANGUAGES</a>
+
+    <a href="#letter">MY STORY</a>
+
     <a href="#contact">CONTACT</a>
+
   </div>
+
 </nav>
+
 
 <main class="wrap">
 
-<!-- HERO -->
+
+<!-- =========================
+     HERO
+========================= -->
 
 <header>
+
   <div class="hero">
 
     <div>
+
       <div class="eyebrow">
         Hospitality • Guest Relations • Guest Experience
       </div>
 
-      <h1>More than a resume.</h1>
+      <h1>
+        More than a resume.
+      </h1>
 
       <p class="hero-copy">
         People-oriented, adaptable and solution-focused.
@@ -613,6 +998,7 @@ footer{
       </p>
 
       <div class="cta">
+
         <a class="btn dark" href="#experience">
           See my experience ↓
         </a>
@@ -620,27 +1006,49 @@ footer{
         <a class="btn" href="Jakub-Oravec-CV.pdf" target="_blank">
           Download CV
         </a>
+
       </div>
+
     </div>
 
+
     <div class="hero-photo">
-      <img src="profile.png" alt="Profile photo">
+
+      <img
+        src="profile.png"
+        alt="Jakub Oravec — Hospitality & Guest Experience"
+      >
+
     </div>
 
   </div>
+
 </header>
 
 
-<!-- PROFILE -->
+
+<!-- =========================
+     PROFILE
+========================= -->
 
 <section id="profile">
 
   <div class="section-head">
+
     <div>
-      <div class="eyebrow">01 / Profile</div>
-      <h2>What I bring.</h2>
+
+      <div class="eyebrow">
+        01 / Profile
+      </div>
+
+      <h2>
+        What I bring.
+      </h2>
+
     </div>
+
   </div>
+
 
   <p class="intro">
     Hospitality experience across a 5-star luxury resort,
@@ -648,68 +1056,130 @@ footer{
     strong customer service, teamwork and an international mindset.
   </p>
 
+
   <div class="value-grid">
 
+
     <div class="value">
-      <div class="value-number">01</div>
-      <h3>Guest-focused</h3>
+
+      <div class="value-number">
+        01
+      </div>
+
+      <h3>
+        Guest-focused
+      </h3>
+
       <p>
         Friendly, attentive and comfortable communicating
         directly with guests.
       </p>
+
     </div>
 
+
     <div class="value">
-      <div class="value-number">02</div>
-      <h3>Adaptable</h3>
+
+      <div class="value-number">
+        02
+      </div>
+
+      <h3>
+        Adaptable
+      </h3>
+
       <p>
         Comfortable learning quickly and working when
         priorities change.
       </p>
+
     </div>
 
+
     <div class="value">
-      <div class="value-number">03</div>
-      <h3>Team player</h3>
+
+      <div class="value-number">
+        03
+      </div>
+
+      <h3>
+        Team player
+      </h3>
+
       <p>
         I support the team, take responsibility and keep
         the energy positive.
       </p>
+
     </div>
 
+
     <div class="value">
-      <div class="value-number">04</div>
-      <h3>Solution-focused</h3>
+
+      <div class="value-number">
+        04
+      </div>
+
+      <h3>
+        Solution-focused
+      </h3>
+
       <p>
         When something goes wrong, my approach is simple:
         “Let's find a solution.”
       </p>
+
     </div>
+
 
   </div>
 
 </section>
 
 
-<!-- EXPERIENCE -->
+
+<!-- =========================
+     EXPERIENCE
+========================= -->
 
 <section id="experience">
 
   <div class="section-head">
+
     <div>
-      <div class="eyebrow">02 / Experience</div>
-      <h2>Where I've worked.</h2>
+
+      <div class="eyebrow">
+        02 / Experience
+      </div>
+
+      <h2>
+        Where I've worked.
+      </h2>
+
     </div>
+
   </div>
+
 
   <div class="timeline">
 
+
     <div class="job">
+
       <div class="job-top">
+
         <div>
-          <h3>IKOS PORTO PETRO S.A.</h3>
-          <div class="role">Pool & Beach Attendant / Food Runner</div>
+
+          <h3>
+            IKOS PORTO PETRO S.A.
+          </h3>
+
+          <div class="role">
+            Pool & Beach Attendant / Food Runner
+          </div>
+
         </div>
+
       </div>
 
       <div class="meta">
@@ -717,20 +1187,45 @@ footer{
       </div>
 
       <ul>
-        <li>Guest assistance and high-quality service.</li>
-        <li>Pool & beach preparation, maintenance and safety support.</li>
-        <li>Food Runner in the pool bar.</li>
-        <li>Worked efficiently in a fast-paced luxury resort environment.</li>
+
+        <li>
+          Guest assistance and high-quality service.
+        </li>
+
+        <li>
+          Pool & beach preparation, maintenance and safety support.
+        </li>
+
+        <li>
+          Food Runner in the pool bar.
+        </li>
+
+        <li>
+          Worked efficiently in a fast-paced luxury resort environment.
+        </li>
+
       </ul>
+
     </div>
 
 
+
     <div class="job">
+
       <div class="job-top">
+
         <div>
-          <h3>Co-living & Surf Hostel</h3>
-          <div class="role">Volunteer · Guest & Operations Support</div>
+
+          <h3>
+            Co-living & Surf Hostel
+          </h3>
+
+          <div class="role">
+            Volunteer · Guest & Operations Support
+          </div>
+
         </div>
+
       </div>
 
       <div class="meta">
@@ -738,20 +1233,45 @@ footer{
       </div>
 
       <ul>
-        <li>Reception support, check-in/out and guest communication.</li>
-        <li>Housekeeping, laundry and common-area preparation.</li>
-        <li>Organised guest activities, hikes, events and pizza nights.</li>
-        <li>General facility support and basic maintenance.</li>
+
+        <li>
+          Reception support, check-in/out and guest communication.
+        </li>
+
+        <li>
+          Housekeeping, laundry and common-area preparation.
+        </li>
+
+        <li>
+          Organised guest activities, hikes, events and pizza nights.
+        </li>
+
+        <li>
+          General facility support and basic maintenance.
+        </li>
+
       </ul>
+
     </div>
 
 
+
     <div class="job">
+
       <div class="job-top">
+
         <div>
-          <h3>Marco Italiano</h3>
-          <div class="role">Retailer · Customer Service</div>
+
+          <h3>
+            Marco Italiano
+          </h3>
+
+          <div class="role">
+            Retailer · Customer Service
+          </div>
+
         </div>
+
       </div>
 
       <div class="meta">
@@ -759,18 +1279,37 @@ footer{
       </div>
 
       <ul>
-        <li>Sales and customer advice for specialty Italian products.</li>
-        <li>Responsible for a fresh meat and cheese counter.</li>
+
+        <li>
+          Sales and customer advice for specialty Italian products.
+        </li>
+
+        <li>
+          Responsible for a fresh meat and cheese counter.
+        </li>
+
       </ul>
+
     </div>
 
 
+
     <div class="job">
+
       <div class="job-top">
+
         <div>
-          <h3>ETACTICS INC.</h3>
-          <div class="role">Marketing & Content Assistant</div>
+
+          <h3>
+            ETACTICS INC.
+          </h3>
+
+          <div class="role">
+            Marketing & Content Assistant
+          </div>
+
         </div>
+
       </div>
 
       <div class="meta">
@@ -778,19 +1317,41 @@ footer{
       </div>
 
       <ul>
-        <li>Created short-form videos and blog content.</li>
-        <li>Supported CRM and data tasks.</li>
-        <li>Communicated in English with an international team.</li>
+
+        <li>
+          Created short-form videos and blog content.
+        </li>
+
+        <li>
+          Supported CRM and data tasks.
+        </li>
+
+        <li>
+          Communicated in English with an international team.
+        </li>
+
       </ul>
+
     </div>
 
 
+
     <div class="job">
+
       <div class="job-top">
+
         <div>
-          <h3>Waterski & Watersports Club</h3>
-          <div class="role">Motorboat Driver & Waterski Trainer</div>
+
+          <h3>
+            Waterski & Watersports Club
+          </h3>
+
+          <div class="role">
+            Motorboat Driver & Waterski Trainer
+          </div>
+
         </div>
+
       </div>
 
       <div class="meta">
@@ -798,237 +1359,637 @@ footer{
       </div>
 
       <ul>
-        <li>Assisted with waterski training sessions.</li>
-        <li>Operated motorboats and handled safety procedures.</li>
-        <li>Supported athletes and club visitors.</li>
+
+        <li>
+          Assisted with waterski training sessions.
+        </li>
+
+        <li>
+          Operated motorboats and handled safety procedures.
+        </li>
+
+        <li>
+          Supported athletes and club visitors.
+        </li>
+
       </ul>
+
     </div>
+
 
   </div>
 
 </section>
 
 
-<!-- SKILLS -->
+
+<!-- =========================
+     SKILLS
+========================= -->
 
 <section id="skills">
 
   <div class="section-head">
+
     <div>
-      <div class="eyebrow">03 / Skills</div>
-      <h2>How I work.</h2>
+
+      <div class="eyebrow">
+        03 / Skills
+      </div>
+
+      <h2>
+        How I work.
+      </h2>
+
     </div>
+
   </div>
+
 
   <div class="skills-layout">
 
+
     <div class="card">
 
-      <div class="skill">
-        <strong>Problem solving</strong>
-        <em>“Let's find a solution.”</em>
-      </div>
 
       <div class="skill">
-        <strong>Communication</strong>
+
+        <strong>
+          Problem solving
+        </strong>
+
+        <em>
+          “Let's find a solution.”
+        </em>
+
+      </div>
+
+
+      <div class="skill">
+
+        <strong>
+          Communication
+        </strong>
+
         <em>
           Clear, friendly and confident with guests and colleagues.
         </em>
+
       </div>
 
+
       <div class="skill">
-        <strong>Teamwork</strong>
+
+        <strong>
+          Teamwork
+        </strong>
+
         <em>
           Support the team, share responsibility and keep the
           energy positive.
         </em>
+
       </div>
 
+
       <div class="skill">
-        <strong>Adaptability</strong>
+
+        <strong>
+          Adaptability
+        </strong>
+
         <em>
           Comfortable learning quickly and working in changing
           environments.
         </em>
+
       </div>
 
+
       <div class="skill">
-        <strong>Responsibility</strong>
+
+        <strong>
+          Responsibility
+        </strong>
+
         <em>
           Reliable with guests, safety, daily tasks and operations.
         </em>
+
       </div>
 
+
     </div>
+
 
 
     <div class="card">
 
-      <div class="eyebrow">Practical skills</div>
+      <div class="eyebrow">
+        Practical skills
+      </div>
+
 
       <div class="tagrow" style="margin-top:20px;">
 
-        <span class="tag">Guest Service</span>
-        <span class="tag">Reception Support</span>
-        <span class="tag">F&B Support</span>
-        <span class="tag">Pool & Beach Operations</span>
-        <span class="tag">MS Office</span>
-        <span class="tag">Excel</span>
-        <span class="tag">PowerPoint</span>
-        <span class="tag">Adobe Premiere Pro</span>
-        <span class="tag">Content Creation</span>
-        <span class="tag">Motorboat Operation</span>
+
+        <span class="tag">
+          Guest Service
+        </span>
+
+        <span class="tag">
+          Reception Support
+        </span>
+
+        <span class="tag">
+          F&B Support
+        </span>
+
+        <span class="tag">
+          Pool & Beach Operations
+        </span>
+
+        <span class="tag">
+          MS Office
+        </span>
+
+        <span class="tag">
+          Excel
+        </span>
+
+        <span class="tag">
+          PowerPoint
+        </span>
+
+        <span class="tag">
+          Adobe Premiere Pro
+        </span>
+
+        <span class="tag">
+          Content Creation
+        </span>
+
+        <span class="tag">
+          Motorboat Operation
+        </span>
+
 
       </div>
 
     </div>
+
 
   </div>
 
 </section>
 
 
-<!-- INTERNATIONAL -->
+
+<!-- =========================
+     INTERNATIONAL
+========================= -->
 
 <section id="international">
 
   <div class="section-head">
+
     <div>
-      <div class="eyebrow">04 / International</div>
-      <h2>Used to new places.</h2>
+
+      <div class="eyebrow">
+        04 / International
+      </div>
+
+      <h2>
+        Used to new places.
+      </h2>
+
     </div>
+
   </div>
+
 
   <p class="intro">
     I enjoy international environments, meeting new people
     and adapting quickly to different teams and cultures.
   </p>
 
+
   <div class="country-grid">
 
+
     <div class="country">
-      <div class="flag">🇪🇸</div>
-      <h3>Spain</h3>
+
+      <div class="flag">
+        🇪🇸
+      </div>
+
+      <h3>
+        Spain
+      </h3>
+
       <p>
         Luxury resort, surf hostel, co-living and guest-facing experience.
       </p>
+
     </div>
 
+
     <div class="country">
-      <div class="flag">🇺🇸</div>
-      <h3>United States</h3>
+
+      <div class="flag">
+        🇺🇸
+      </div>
+
+      <h3>
+        United States
+      </h3>
+
       <p>
         Marketing, content and communication within an international team.
       </p>
+
     </div>
 
+
     <div class="country">
-      <div class="flag">🇸🇰</div>
-      <h3>Slovakia</h3>
+
+      <div class="flag">
+        🇸🇰
+      </div>
+
+      <h3>
+        Slovakia
+      </h3>
+
       <p>
         Customer service, retail, watersports and operational experience.
       </p>
+
     </div>
+
 
   </div>
 
 </section>
 
 
-<!-- EDUCATION -->
+
+<!-- =========================
+     EDUCATION
+========================= -->
 
 <section id="education">
 
   <div class="section-head">
+
     <div>
-      <div class="eyebrow">05 / Education</div>
-      <h2>Education.</h2>
+
+      <div class="eyebrow">
+        05 / Education
+      </div>
+
+      <h2>
+        Education.
+      </h2>
+
     </div>
+
   </div>
 
+
   <details>
-    <summary>Agroecology — Mendel University in Brno</summary>
+
+    <summary>
+      Agroecology — Mendel University in Brno
+    </summary>
+
     <div class="detail">
       Brno, Czech Republic · Sep 2020 — Jun 2021
     </div>
+
   </details>
 
+
   <details>
-    <summary>Biotechnology — Slovak University of Agriculture in Nitra</summary>
+
+    <summary>
+      Biotechnology — Slovak University of Agriculture in Nitra
+    </summary>
+
     <div class="detail">
       Nitra, Slovak Republic · Sep 2018 — Dec 2019
     </div>
+
   </details>
 
+
   <details>
-    <summary>Gymnasium Pierra de Coubertin</summary>
+
+    <summary>
+      Gymnasium Pierra de Coubertin
+    </summary>
+
     <div class="detail">
       Piešťany, Slovak Republic · Sep 2014 — Jun 2018
     </div>
+
   </details>
 
 </section>
 
 
-<!-- LANGUAGES -->
+
+<!-- =========================
+     LANGUAGES
+========================= -->
 
 <section id="languages">
 
   <div class="section-head">
+
     <div>
-      <div class="eyebrow">06 / Languages</div>
-      <h2>Communication.</h2>
+
+      <div class="eyebrow">
+        06 / Languages
+      </div>
+
+      <h2>
+        Communication.
+      </h2>
+
     </div>
+
   </div>
+
 
   <div class="language-grid">
 
-    <div class="language">
-      <div class="flag">🇸🇰</div>
-      <strong>Slovak</strong>
-      <span>Native</span>
-    </div>
 
     <div class="language">
-      <div class="flag">🇬🇧</div>
-      <strong>English</strong>
-      <span>Fluent</span>
+
+      <div class="flag">
+        🇸🇰
+      </div>
+
+      <strong>
+        Slovak
+      </strong>
+
+      <span>
+        Native
+      </span>
+
     </div>
 
-    <div class="language">
-      <div class="flag">🇨🇿</div>
-      <strong>Czech</strong>
-      <span>Advanced</span>
-    </div>
 
     <div class="language">
-      <div class="flag">🇪🇸</div>
-      <strong>Spanish</strong>
-      <span>Conversational</span>
+
+      <div class="flag">
+        🇬🇧
+      </div>
+
+      <strong>
+        English
+      </strong>
+
+      <span>
+        Fluent
+      </span>
+
     </div>
 
+
     <div class="language">
-      <div class="flag">🇩🇪</div>
-      <strong>German</strong>
-      <span>Basic</span>
+
+      <div class="flag">
+        🇨🇿
+      </div>
+
+      <strong>
+        Czech
+      </strong>
+
+      <span>
+        Advanced
+      </span>
+
     </div>
+
+
+    <div class="language">
+
+      <div class="flag">
+        🇪🇸
+      </div>
+
+      <strong>
+        Spanish
+      </strong>
+
+      <span>
+        Conversational
+      </span>
+
+    </div>
+
+
+    <div class="language">
+
+      <div class="flag">
+        🇩🇪
+      </div>
+
+      <strong>
+        German
+      </strong>
+
+      <span>
+        Basic
+      </span>
+
+    </div>
+
 
   </div>
 
 </section>
 
 
-<!-- CONTACT -->
+
+<!-- =========================
+     PERSONAL LETTER
+========================= -->
+
+<section id="letter">
+
+  <div class="section-head">
+
+    <div>
+
+      <div class="eyebrow">
+        07 / Personal Letter
+      </div>
+
+      <h2>
+        Why hospitality?
+      </h2>
+
+    </div>
+
+  </div>
+
+
+  <div class="letter-intro">
+
+    <p class="intro">
+      A little more about the person behind the resume.
+    </p>
+
+
+    <details class="letter-details">
+
+
+      <summary>
+
+        <span>
+          Read my story
+        </span>
+
+        <span>
+          ↓
+        </span>
+
+      </summary>
+
+
+      <div class="letter">
+
+
+        <p>
+          Dear Hiring Manager,
+        </p>
+
+
+        <p>
+          I'm looking for a role where I can work with people,
+          be part of a good team and contribute to an environment
+          where guests feel welcome.
+        </p>
+
+
+        <p>
+          My experience has taken me through different environments
+          — from working in a <strong>5-star luxury resort in Mallorca</strong>,
+          to a <strong>surf hostel and co-living environment in Spain</strong>,
+          as well as customer-facing roles in Slovakia and an
+          international team in the United States.
+        </p>
+
+
+        <p>
+          What I enjoy about hospitality is the combination of
+          <strong>people, energy and responsibility.</strong>
+          I like being around guests, helping when something is needed
+          and being part of the team that makes things work behind
+          the scenes as well.
+        </p>
+
+
+        <p>
+          I've learned that good hospitality isn't always about doing
+          something extraordinary. Very often, it's about being
+          approachable, paying attention, staying calm and simply
+          doing what needs to be done.
+        </p>
+
+
+        <div class="letter-highlight">
+
+          <span>
+            MY APPROACH
+          </span>
+
+          <strong>
+            “Let's find a solution.”
+          </strong>
+
+        </div>
+
+
+        <p>
+          I'm particularly interested in opportunities within
+          <strong>hotels, resorts, camping, glamping, hostels,
+          co-living, tourism and gastronomy.</strong>
+          I enjoy international environments and meeting people
+          from different backgrounds.
+        </p>
+
+
+        <p>
+          I bring a positive attitude, flexibility, reliability
+          and a strong team mindset. My background in competitive
+          waterskiing also taught me discipline, responsibility
+          and how important it is to support the people around you.
+        </p>
+
+
+        <p>
+          I'm now looking for my next opportunity in Europe —
+          somewhere I can contribute from day one, learn from
+          the team and continue building my experience in hospitality.
+        </p>
+
+
+        <p>
+          If you're looking for someone who enjoys working with
+          people, isn't afraid of practical work and brings a
+          positive attitude to the team, I'd be happy to talk.
+        </p>
+
+
+        <p class="letter-sign">
+
+          Best regards,<br>
+
+          <strong>
+            Jakub
+          </strong>
+
+        </p>
+
+
+      </div>
+
+
+    </details>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section id="contact">
 
   <div class="contact-box">
 
-    <div class="eyebrow" style="color:#aaa;">
-      07 / Contact
+
+    <div
+      class="eyebrow"
+      style="color:#aaa;"
+    >
+      08 / Contact
     </div>
 
-    <h2>Let's talk.</h2>
+
+    <h2>
+      Let's talk.
+    </h2>
+
 
     <p>
       Looking for my next opportunity in hospitality,
@@ -1036,30 +1997,49 @@ footer{
       international team.
     </p>
 
+
     <div class="contact-links">
+
 
       <a href="mailto:jakub.oravec11@gmail.com">
         Email me
       </a>
 
+
       <a href="tel:+421918048320">
         Call me
       </a>
 
-      <a href="Jakub-Oravec-CV.pdf" target="_blank">
+
+      <a
+        href="Jakub-Oravec-CV.pdf"
+        target="_blank"
+      >
         Download CV
       </a>
 
+
     </div>
+
 
   </div>
 
 </section>
 
 
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
-  More than a resume. · Hospitality & Guest Experience
+
+  More than a resume.
+  ·
+  Hospitality & Guest Experience
+
 </footer>
+
 
 </main>
 
